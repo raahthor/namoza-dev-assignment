@@ -1,7 +1,7 @@
 # Task 1 GTM Event Schema for OrthoNow
 
 ---
- 
+
 ## Event Schema Table
 
 | Event Name | Trigger Type | Key Parameters | GA4 Report / Audience |

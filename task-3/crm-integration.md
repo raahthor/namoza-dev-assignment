@@ -21,7 +21,7 @@ I chose direct HubSpot API over Zapier or Make because it gives full control ove
 Immediately after the HubSpot call succeeds, the backend calls the Karix WhatsApp Business API to send the patient a confirmation message. Firing this after HubSpot (not in parallel) ensures we only message patients whose records are confirmed in the CRM.
 
 ---
-
+ 
 ## Biggest Failure Point
 
 HubSpot deduplicates contacts on email by default - not phone number. Since this form collects no email address, submitting the same phone number twice would create two separate contacts in HubSpot unless explicitly handled. To fix this: always call the Contacts Search API before creating anything. Search by phone, and if a record exists, update it. If not, create new. Never POST a new contact without checking first.

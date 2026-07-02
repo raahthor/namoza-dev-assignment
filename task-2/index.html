@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Book a consultation with OrthoNow's expert orthopaedic surgeons. 9 clinics across Bengaluru, Hyderabad and Chennai.">
+    <title>Book an Orthopaedic Consultation - OrthoNow</title>
+
+    <!--
+    GTM container snippet goes here in production.
+    dataLayer is initialised in the script below before GTM loads.
+    -->
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        font-family: sans-serif;
+        background: #f4f4f4;
+        color: #111;
+        font-size: 16px;
+      }
+
+      /* header */
+      .site-header {
+        background: #fff;
+        padding: 14px;
+        display: flex;
+        gap:20px;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 20px;
+        font-weight: 800;
+        color: black;
+      }
+
+      .logo span {
+        color: gray;
+      }
+
+      .header-tag {
+        font-size: 12px;
+        color: gray;
+      }
+
+      /* hero */
+      .hero {
+        background: #2e2e2e;
+        color: #fff;
+        padding: 80px 35px;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: clamp(20px, 5.5vw, 35px);
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .hero .subhead {
+        color: gray;
+        max-width: 480px;
+        margin: 0 auto 28px auto;
+      }
+
+      /* form card */
+      .form-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 28px 25px;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .form-card h2 {
+        font-size: 16px;
+        font-weight: 700;
+        color: black;
+        text-align: center;
+        margin-bottom: 18px;
+      }
+
+      .field {
+        margin-bottom: 12px;
+      }
+
+      .field label {
+        display: block;
+        text-align: left;
+        font-size: 13px;
+        font-weight: 600;
+        color: #555;
+        margin-bottom: 5px;
+      }
+
+      .field input {
+        width: 100%;
+        padding: 10px 14px;
+        border: 1px solid lightgray;
+        border-radius: 8px;
+        font-size: 16px;
+        color: black;
+        background: #fafafa;
+      }
+
+      .cta-btn {
+        width: 100%;
+        padding: 10px;
+        margin-top: 6px;
+        background: #111;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .cta-btn:hover {
+        background: #333;
+      }
+
+      /* thank you after submit */
+      .thank-you {
+        display: none;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      .thank-you h2 {
+        font-size: 20px;
+        color: black;
+        margin-bottom: 6px;
+      }
+
+      .thank-you p {
+        font-size: 14px;
+        color: gray;
+        line-height: 1.6;
+      }
+
+      /* trust elements */
+      .trust-bar {
+        background: #fff;
+        padding: 25px 16px;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 40px;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      .trust-item {
+        text-align: center;
+      }
+
+      .trust-item strong {
+        display: block;
+        font-size: 20px;
+        font-weight: 800;
+        color: black;
+      }
+
+      .trust-item span {
+        font-size: 12px;
+        color: gray;
+      }
+
+      /* footer */
+      .site-footer {
+        background: #2e2e2e;
+        color: lightgray;
+        text-align: center;
+        padding: 18px 16px;
+        font-size: 12px;
+        line-height: 1.8;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="logo">Ortho<span>Now</span></div>
+      <div class="header-tag">9 Clinics - Bengaluru - Hyderabad - Chennai</div>
+    </header>
+
+    <section class="hero">
+      <h1>Knee or back pain slowing you down?</h1>
+      <p class="subhead">
+        Get an expert orthopaedic opinion at OrthoNow, same week near you.
+      </p>
+
+      <div class="form-card">
+        <h2>Book Your Consultation</h2>
+
+        <form id="booking-form">
+          <div class="field">
+            <label>Your name</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="e.g. Sachin Kumar"
+              required
+            />
+          </div>
+          <div class="field">
+            <label>Mobile number</label>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="+91 12345 12345"
+              inputmode="numeric"
+              required
+            />
+          </div>
+          <button type="submit" class="cta-btn">Book Consultation</button>
+        </form>
+        <div class="thank-you" id="thank-you" aria-live="polite">
+          <h2>You're all set</h2>
+          <p>Our team will call you within 2 hours to confirm your slot.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- trust elements -->
+    <div class="trust-bar">
+      <div class="trust-item"><strong>9</strong><span>Clinics</span></div>
+      <div class="trust-item">
+        <strong>15,000+</strong><span>Patients Treated</span>
+      </div>
+      <div class="trust-item">
+        <strong>12+</strong><span>Years Experience</span>
+      </div>
+      <div class="trust-item">
+        <strong>4.8 &#9733;</strong><span>Google Rating</span>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div>OrthoNow - Bengaluru &middot; Hyderabad &middot; Chennai</div>
+      <div>&copy; 2026 OrthoNow. All rights reserved.</div>
+    </footer>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      var form = document.getElementById("booking-form");
+      var thankYou = document.getElementById("thank-you");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = form.name.value;
+        const phone = form.phone.value;
+        
+        //In production we can add GTM related data here
+
+        window.dataLayer.push({
+          event: "consultation_form_submitted",
+          patient_name: name,
+          phone_number: phone,
+          form_name: "book_consultation_hero",
+          lead_source: "consultation_landing_page",
+          page_location: window.location.href,
+        });
+
+        console.log(window.dataLayer);
+        
+        form.style.display = "none";
+        thankYou.style.display = "block";
+      });
+    </script>
+  </body>
+</html>

@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Book a consultation with OrthoNow's expert orthopaedic surgeons. 9 clinics across Bengaluru, Hyderabad and Chennai.">
+    <meta
+      name="description"
+      content="Book a consultation with OrthoNow's expert orthopaedic surgeons. 9 clinics across Bengaluru, Hyderabad and Chennai."
+    />
     <title>Book an Orthopaedic Consultation - OrthoNow</title>
 
     <!--
@@ -32,7 +34,7 @@
         background: #fff;
         padding: 14px;
         display: flex;
-        gap:20px;
+        gap: 20px;
         justify-content: space-between;
         align-items: center;
       }
@@ -49,7 +51,7 @@
 
       .header-tag {
         font-size: 12px;
-        color: gray;
+        color: #767676;
       }
 
       /* hero */
@@ -67,7 +69,7 @@
       }
 
       .hero .subhead {
-        color: gray;
+        color: #aaa;
         max-width: 480px;
         margin: 0 auto 28px auto;
       }
@@ -98,7 +100,7 @@
         text-align: left;
         font-size: 13px;
         font-weight: 600;
-        color: #555;
+        color: #444;
         margin-bottom: 5px;
       }
 
@@ -144,7 +146,7 @@
 
       .thank-you p {
         font-size: 14px;
-        color: gray;
+        color: #767676;
         line-height: 1.6;
       }
 
@@ -172,7 +174,7 @@
 
       .trust-item span {
         font-size: 12px;
-        color: gray;
+        color: #767676;
       }
 
       /* footer */
@@ -193,59 +195,59 @@
       <div class="logo">Ortho<span>Now</span></div>
       <div class="header-tag">9 Clinics - Bengaluru - Hyderabad - Chennai</div>
     </header>
+    <main>
+      <section class="hero">
+        <h1>Knee or back pain slowing you down?</h1>
+        <p class="subhead">
+          Get an expert orthopaedic opinion at OrthoNow, same week near you.
+        </p>
 
-    <section class="hero">
-      <h1>Knee or back pain slowing you down?</h1>
-      <p class="subhead">
-        Get an expert orthopaedic opinion at OrthoNow, same week near you.
-      </p>
+        <div class="form-card">
+          <h2>Book Your Consultation</h2>
 
-      <div class="form-card">
-        <h2>Book Your Consultation</h2>
-
-        <form id="booking-form">
-          <div class="field">
-            <label for="name">Your name</label>
-            <input
-              type="text"
-              name="name"
-              placeholder="e.g. Sachin Kumar"
-              required
-            />
+          <form id="booking-form">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input
+                type="text"
+                name="name"
+                placeholder="e.g. Sachin Kumar"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="phone">Mobile number</label>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="+91 12345 12345"
+                inputmode="numeric"
+                required
+              />
+            </div>
+            <button type="submit" class="cta-btn">Book Consultation</button>
+          </form>
+          <div class="thank-you" id="thank-you" aria-live="polite">
+            <h2>You're all set</h2>
+            <p>Our team will call you within 2 hours to confirm your slot.</p>
           </div>
-          <div class="field">
-            <label for="phone">Mobile number</label>
-            <input
-              type="tel"
-              name="phone"
-              placeholder="+91 12345 12345"
-              inputmode="numeric"
-              required
-            />
-          </div>
-          <button type="submit" class="cta-btn">Book Consultation</button>
-        </form>
-        <div class="thank-you" id="thank-you" aria-live="polite">
-          <h2>You're all set</h2>
-          <p>Our team will call you within 2 hours to confirm your slot.</p>
+        </div>
+      </section>
+
+      <!-- trust elements -->
+      <div class="trust-bar">
+        <div class="trust-item"><strong>9</strong><span>Clinics</span></div>
+        <div class="trust-item">
+          <strong>15,000+</strong><span>Patients Treated</span>
+        </div>
+        <div class="trust-item">
+          <strong>12+</strong><span>Years Experience</span>
+        </div>
+        <div class="trust-item">
+          <strong>4.8 &#9733;</strong><span>Google Rating</span>
         </div>
       </div>
-    </section>
-
-    <!-- trust elements -->
-    <div class="trust-bar">
-      <div class="trust-item"><strong>9</strong><span>Clinics</span></div>
-      <div class="trust-item">
-        <strong>15,000+</strong><span>Patients Treated</span>
-      </div>
-      <div class="trust-item">
-        <strong>12+</strong><span>Years Experience</span>
-      </div>
-      <div class="trust-item">
-        <strong>4.8 &#9733;</strong><span>Google Rating</span>
-      </div>
-    </div>
-
+    </main>
     <footer class="site-footer">
       <div>OrthoNow - Bengaluru &middot; Hyderabad &middot; Chennai</div>
       <div>&copy; 2026 OrthoNow. All rights reserved.</div>
@@ -262,7 +264,7 @@
 
         const name = form.name.value;
         const phone = form.phone.value;
-        
+
         //In production we can add GTM related data here
 
         window.dataLayer.push({
@@ -275,7 +277,7 @@
         });
 
         console.log(window.dataLayer);
-        
+
         form.style.display = "none";
         thankYou.style.display = "block";
       });
